@@ -1,0 +1,284 @@
+/* Apply Figma Gradient Background */ 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(140.72deg, #EAECF0 -43.62%, #6C03C0 91.63%);
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Ensure body takes full height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    max-width: 100%; /* Full width of the screen */
+    width: 100%;
+    height: 100vh; /* Full height of the screen */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar (Left Section) */
+.sidebar {
+    flex: 0 0 60%; /* 60% width */
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content at the top */
+    flex-grow: 1;
+    overflow-y: hidden; /* Prevent scrolling */
+    margin: 0; /* Ensure no margin around the sidebar */
+}
+
+/* Make HRM Heading Bigger */
+.hrm-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 50px; /* Increase font size */
+    line-height: 70px; /* Adjust line height */
+    color: #FFFFFF;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+/* Remove the gap between the HRM heading and the next paragraph */
+/* Style for the paragraphs inside the sidebar */
+.sidebar p {
+    margin: 0; /* Remove margin between paragraphs */
+    padding: 0; /* Remove padding */
+    line-height: 1.2; /* Adjust line height to keep the lines close together */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+/* Tagline Styling */
+.tagline {
+    width: 100%; /* Make sure the tagline spans full width */
+    margin-top: 10px;
+}
+
+.line1 {
+    font-size: 40px; /* Line 1 (looking for people) */
+    font-weight: bold;
+    color: white;
+    display: block;
+}
+
+.line2 {
+    font-size: 40px; /* Line 2 (multiverse) */
+    font-weight: bold;
+    color: white;
+    display: block;
+    line-height: 1.2;
+}
+
+/* Adjust Image Size */
+.sidebar img {
+    width: 80%; /* Increase the width of the image */
+    height: 320px; /* Keep the aspect ratio intact */
+    margin-bottom: 10px; /* Add space between the image and text */
+}
+
+/* Right Section (Signup Form) */
+.form-container {
+    flex: 0 0 40%; /* 40% width */
+    padding: 30px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    height: 100%; /* Ensure it takes full height */
+    position: relative; /* Ensure the form-container is relative for absolute positioning of the back button */
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;   /* Position it absolutely within the form-container */
+    top: 20px;            /* Set distance from the top */
+    left: 100px;           /* Set distance from the left */
+    background: transparent; /* No background color */
+    border: none;         /* Remove the border */
+    color: rgba(66, 65, 65, 0.676);         /* Text color is black */
+    font-size: 10px;      /* Font size */
+    font-weight: bold;    /* Make the text bold */
+    cursor: pointer;     /* Pointer cursor on hover */
+    z-index: 1000;        /* Ensure it's on top of other elements */
+}
+
+.back-button:hover {
+    color: #a5a1a8; /* Color on hover */
+}
+
+/* Move the form fields (username, email, password) a little to the left */
+.form-container label, 
+.form-container input {
+    margin-left: -180px; /* Adjust this value to shift the fields left */
+}
+
+/* Heading for Create new account */
+.form-container h2 {
+    position: absolute;
+    top: 150px; /* Move the heading up */
+    margin-left: 0; /* Keep margin-left as 0 */
+    left: 115px;
+}
+
+/* Styling for the Welcome message */
+.welcome-message {
+    font-size: 14px;
+    color: #cbc2c2;
+    margin-top: 5px;
+    margin-left: -102px;  /* Adjust this value to move the text left */
+    text-align: left; /* Align text to left */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the inputs remain within the correct width */
+input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 330%; /* Set input fields to use the full width available */
+    max-width: 350px; /* Set max-width to avoid stretching too much */
+}
+
+/* Error message styling */
+.error-message {
+    color: rgb(216, 207, 207);
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+    width: 100%; /* Ensure error message is the same width as the input field */
+}
+
+/* Label Styling */
+.input-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+    transition: opacity 0.3s ease;
+}
+
+/* Hide the label on focus */
+input:focus + .input-label {
+    opacity: 0;
+}
+
+/* Make the Terms text smaller, center it and shift a little to the right */
+.terms {
+    display: flex;
+    flex-direction: column;
+    margin-left: 95px; /* Shift the entire content to the right */
+}
+
+/* Apply to the specific label within .terms container */
+.terms-label {
+    font-size: 10px; /* Make the font smaller */
+    font-family: 'Arial', sans-serif; /* Different font family */
+    margin-top: 10px; /* Adjust top margin */
+    text-align: left; /* Align text to the left */
+}
+
+.privacy-policy {
+    font-size: 10px; /* Even smaller font size */
+    font-family: 'Arial', sans-serif; /* Another different font family */
+    margin-top: 5px; /* Space between the two labels */
+    text-align: left; /* Align text to the left */
+}
+
+/* Button Styling */
+button {
+    background: #6C03C0;
+    color: white;
+    width: auto;
+    padding: 6px 12px; /* Decrease padding */
+    font-size: 14px; /* Decrease font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: -100px;
+}
+
+
+
+/* Adjust Image Size */
+.sidebar img {
+    width: 80%; /* Increase the width of the image */
+    height: 320px; /* Keep the aspect ratio intact */
+    margin-bottom: 10px; /* Add space between the image and text */
+}
+
+button:hover {
+    background: #4B0082;
+}
+
+/* Make the Terms of Use and Privacy Policy text blue, except for 'and' */
+.blue-text {
+    color: #0066cc; /* Blue color */
+}
+
+.black-text {
+    color: black; /* Black color for 'and' */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto; /* Adjust height for small screens */
+    }
+
+    .sidebar, .form-container {
+        padding: 20px;
+    }
+
+    .form-container label,
+    .form-container input {
+        margin-left: 0; /* Remove margin left for smaller screens */
+    }
+
+    .back-button {
+        left: 20px; /* Adjust left position for smaller screens */
+    }
+
+    .form-container h2 {
+        margin-left: 0; /* Adjust heading for smaller screens */
+    }
+
+    /* Adjust input field width for smaller screens */
+    input {
+        width: 100%; /* Full width on small screens */
+        max-width: 100%; /* Prevent it from overflowing */
+    }
+
+    /* Adjust button width for smaller screens */
+    button {
+        width: 100%; /* Make button full width on smaller screens */
+        margin-left: 0; /* Reset margin for button */
+    }
+
+    .sidebar img {
+        width: 100%; /* Make image full width on small screens */
+        height: auto; /* Keep the aspect ratio */
+    }
+}
